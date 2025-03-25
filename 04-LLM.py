@@ -47,11 +47,11 @@ def gera_insights():
             COUNT(p.id_compra) AS total_compras,
             SUM(pr.preco) AS total_gasto
         FROM 
-            operacoes.d_clientes c
+            operacoes.clientes c
         JOIN 
-            operacoes.f_compras p ON c.id_cliente = p.id_cliente
+            operacoes.compras p ON c.id_cliente = p.id_cliente
         JOIN 
-            operacoes.d_produtos pr ON p.id_produto = pr.id_produto
+            operacoes.produtos pr ON p.id_produto = pr.id_produto
         GROUP BY 
             c.nome
         ORDER BY     
