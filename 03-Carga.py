@@ -28,9 +28,9 @@ def carrega_dados(csv_file, table_name, schema):
         print(f"Erro ao inserir dados do arquivo {csv_file} na tabela {schema}.{table_name}: {e}")
 
 # Carregamento dos dados no schema 'lab5'
-carrega_dados('clientes_gerados.csv', 'd_clientes', 'operacoes')
-carrega_dados('produtos_gerados.csv', 'd_produtos', 'operacoes')
-carrega_dados('compras_geradas.csv', 'f_compras', 'operacoes')
+carrega_dados('clientes.csv', 'clientes', 'operacoes')
+carrega_dados('produtos.csv', 'produtos', 'operacoes')
+carrega_dados('compras.csv', 'compras', 'operacoes')
 
 print("\nCarga Executada com Sucesso! Use o pgAdmin Para Checar os Dados Se Desejar!\n")
 
