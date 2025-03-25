@@ -1,0 +1,19 @@
+# Instruções:
+
+# 1- Instale o Docker Desktop conforme instruções das aulas.
+
+# 2- Abra o terminal ou prompt de comando e execute a instrução abaixo para criar o container Docker:
+
+docker run --name pipeline_com_ia-sql-python-llm -p 5959:5432 -e POSTGRES_USER=alisson -e POSTGRES_PASSWORD=alisson -e POSTGRES_DB=db -d postgres:16.1
+
+# 3- Certifique que você tem o Python instalado localmente (utilizado neste projeto a versão 3.13.2).
+
+# 4- Instale o Ollama disponível em https://ollama.com/ (utilizado a versão 3.1), na sequência, execute o comando no Bash ollama run llama3.1
+
+# 5- Abra o terminal ou prompt de comando, navegue até a pasta onde estão os arquivos e instale as dependências: 
+
+pip install -r requirements.txt
+
+# 6- Abra o terminal ou prompt de comando, navegue até a pasta onde estão os arquivos e execute o pipeline assim:
+
+python 05-Run-Pipeline.py
