@@ -17,7 +17,7 @@ def run_pipeline(script_name):
 # Lista de scripts
 scripts = [
     '02-CriaDB.py',
-    '03-Carga.py',
+    '03-Extrai e Carrega.py',
     '04-LLM.py'
 ]
 
