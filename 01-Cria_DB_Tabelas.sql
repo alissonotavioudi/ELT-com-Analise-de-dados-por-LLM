@@ -1,4 +1,5 @@
---Analytics Engineering - Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+-- Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+
 -- SQL - Criação do Banco de Dados
 
 -- Deleta o schema se já existir

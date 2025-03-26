@@ -1,4 +1,5 @@
-# Analytics Engineering - Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+# Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+
 # Python - Pipeline de Extração de Insights com LLM
 
 # Imports
@@ -7,10 +8,11 @@ import psycopg2
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import OllamaLLM
+from config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 print("\nIniciando o Processo de Extração de Insights...\n")
 
-# Instanciação do LLM Llama3 através do Ollama
+# Instanciação do LLM Llama3.1 através do Ollama
 print("Carregando modelo Llama3.1 no Ollama...")
 llm = OllamaLLM(model="llama3.1")
 print("Modelo carregado com sucesso!\n")
@@ -24,19 +26,13 @@ def gera_insights():
     print("Conectando ao banco de dados PostgreSQL...")
     try:
 # Conecta ao banco de dados PostgreSQL com as credenciais fornecidas
-        from dotenv import load_dotenv
-        import os
-        import psycopg2
-
-        load_dotenv()
-
         conn = psycopg2.connect(
-            dbname=os.getenv("DB_NAME"),
-            user=os.getenv("DB_USER"),
-            password=os.getenv("DB_PASSWORD"),
-            host=os.getenv("DB_HOST"),
-            port=os.getenv("DB_PORT")
-        )
+            dbname=DB_NAME,
+            user=DB_USER,
+            password=DB_PASSWORD,
+            host=DB_HOST,
+            port=DB_PORT
+           )
         print("Conexão estabelecida com sucesso!\n")
     except Exception as e:
         print(f"Erro ao conectar ao banco de dados: {e}")
@@ -46,7 +42,8 @@ def gera_insights():
     cursor = conn.cursor()
     
     print("Executando consulta SQL para extrair dados dos clientes, compras e produtos...")
-    # Define a consulta SQL para obter dados dos clientes, compras e produtos
+    # Aqui realizo uma transformação nos dados das tabelas afim de obter dados dos clientes, compras e produtos
+
     query = """
         SELECT 
             c.nome,
@@ -84,7 +81,7 @@ def gera_insights():
     # Criação do template de prompt para o chatbot
     prompt = ChatPromptTemplate.from_messages(
         [
-            ("system", "Você é um analista de dados especializado. Analise os dados sobre os padrões de compras dos clientes e forneça feedback em português do Brasil."),
+            ("system", "Você é um especialista em análise de dados. Examine os padrões de compras dos clientes com base nos dados fornecidos e elabore um feedback detalhado em português do Brasil."),
             ("user", "question: {question}")
         ]
     )

@@ -1,4 +1,5 @@
-# Analytics Engineering - Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+# Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+
 # Python - Executa o Pipeline
 
 # Imports
@@ -18,7 +19,7 @@ def run_pipeline(script_name):
 scripts = [
     '02-CriaDB.py',
     '03-Extrai e Carrega.py',
-    '04-LLM.py'
+    '04-Transforma dados e Gera Insights LLM.py'
 ]
 
 # Executa os scripts em um loop

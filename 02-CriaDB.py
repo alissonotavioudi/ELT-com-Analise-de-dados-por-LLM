@@ -1,25 +1,20 @@
-# Analytics Engineering - Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+# Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+
 # Python - Pipeline de Criação do Banco de Dados
 
-# Import
 import psycopg2
+from config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 # Função para executar script SQL
 def executa_script_sql(filename):
     
-    from dotenv import load_dotenv
-    import os
-    import psycopg2
-
-    load_dotenv()
-
-    # Conecta ao banco de dados PostgreSQL com as credenciais fornecidas
+# Conecta ao banco de dados PostgreSQL com as credenciais fornecidas
     conn = psycopg2.connect(
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT")
+       dbname=DB_NAME,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        host=DB_HOST,
+        port=DB_PORT
     )
 
     # Abre um cursor para realizar operações no banco de dados

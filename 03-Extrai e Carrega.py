@@ -1,18 +1,15 @@
-# Lab 5 - Analytics Engineering - Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+# Python, SQL e LLM Para Extrair Insights em Pipelines de Engenharia de Dados
+
 # Python - Pipeline de Carga de Dados
 
 # Imports
 import psycopg2
-import os
 import pandas as pd
 from sqlalchemy import create_engine
-from dotenv import load_dotenv
+from config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
-load_dotenv() 
-
-# Cria o motor de conexão (ATENÇÃO COM A STRING DE CONEXÃO ABAIXO!!!!!!)
-connection_string = f'postgresql+psycopg2://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
-engine = create_engine(connection_string)
+# Cria o motor de conexão 
+engine = create_engine(f'postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
 
 print("\nIniciando o Processo de Carga dos Dados!\n")
 
