@@ -19,8 +19,7 @@ def run_pipeline(script_name):
 scripts = [
     '02-CriaDB.py',
     '03-Extrai e Carrega.py',
-    '04-Transforma dados e Gera Insights LLM.py'
-]
+    '04-Transforma dados e Gera Insights LLM.py']
 
 # Executa os scripts em um loop
 for script in scripts:
@@ -28,3 +27,8 @@ for script in scripts:
 
 
 print(f"\nPipeline executado com sucesso.\n")
+
+
+# Inicia o Streamlit
+print("\nIniciando o Dashboard no Streamlit...\n")
+subprocess.run([r"C:\Users\tavin\OneDrive\Área de Trabalho\Projetos - Alisson\venv\Scripts\streamlit.exe", "run", "05-Dash Streamlit.py"], check=True)
