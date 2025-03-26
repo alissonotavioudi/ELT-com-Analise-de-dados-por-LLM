@@ -3,11 +3,16 @@
 
 # Imports
 import psycopg2
+import os
 import pandas as pd
 from sqlalchemy import create_engine
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # Cria o motor de conexão (ATENÇÃO COM A STRING DE CONEXÃO ABAIXO!!!!!!)
-engine = create_engine('postgresql+psycopg2://alisson:alisson@localhost:5959/db')
+connection_string = f'postgresql+psycopg2://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}'
+engine = create_engine(connection_string)
 
 print("\nIniciando o Processo de Carga dos Dados!\n")
 

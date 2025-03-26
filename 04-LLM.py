@@ -23,13 +23,19 @@ def gera_insights():
 
     print("Conectando ao banco de dados PostgreSQL...")
     try:
-        # Conecta ao banco de dados PostgreSQL com as credenciais fornecidas
+# Conecta ao banco de dados PostgreSQL com as credenciais fornecidas
+        from dotenv import load_dotenv
+        import os
+        import psycopg2
+
+        load_dotenv()
+
         conn = psycopg2.connect(
-            dbname="db",
-            user="alisson",
-            password="alisson",
-            host="localhost",
-            port="5959"
+            dbname=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT")
         )
         print("Conexão estabelecida com sucesso!\n")
     except Exception as e:
