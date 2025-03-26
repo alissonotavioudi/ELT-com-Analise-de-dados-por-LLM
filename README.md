@@ -64,11 +64,12 @@ python 06-Executa_Pipeline_e_gera_Dash.py
 
 Isso irá processar os dados, gerar insights com o LLM e disponibilizar um dashboard interativo.
 
-Observações
+
+
+📌 Observações
 Certifique-se de que o banco de dados PostgreSQL esteja rodando no Docker antes de executar os scripts.
 
 O projeto utiliza dados fictícios para fins de demonstração.
-
 Para uma análise mais aprofundada, recomenda-se a utilização de um LLM adequado e devidamente configurado.
 
 Contribuições
