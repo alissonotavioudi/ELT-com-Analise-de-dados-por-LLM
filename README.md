@@ -40,9 +40,7 @@ O fluxo do projeto é estruturado nas seguintes etapas:
 
 ## Como Executar o Projeto
 
-### 1️⃣ Instale as Dependências  
-
-```bash
+1️⃣ Instale as Dependências  
 pip install -r requirements.txt
 
 2️⃣ Configure o Banco de Dados no Docker
