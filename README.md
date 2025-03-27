@@ -75,7 +75,9 @@ Isso irá:
 ⚠️ Observações Importantes
 
 🔹 Certifique-se de que o banco de dados PostgreSQL esteja rodando no Docker antes de executar os scripts.
+
 🔹 O projeto utiliza dados fictícios para fins de demonstração.
+
 🔹 Para uma análise mais aprofundada, recomenda-se a utilização de um LLM adequado e devidamente configurado.
 
 🤝 Contribuições
