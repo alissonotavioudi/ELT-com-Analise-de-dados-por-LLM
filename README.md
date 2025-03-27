@@ -41,9 +41,11 @@ O fluxo do projeto é estruturado nas seguintes etapas:
 ## Como Executar o Projeto
 
 1️⃣ Instale as Dependências  
+
 pip install -r requirements.txt
 
 2️⃣ Configure o Banco de Dados no Docker
+
 Caso ainda não tenha um banco PostgreSQL rodando, execute o seguinte comando para criar um container com a instância do banco:
 
 docker run --name pipeline_com_ia-sql-python-llm -p 5959:5432 -e POSTGRES_USER=seu_usuario -e POSTGRES_PASSWORD=sua_senha -e POSTGRES_DB=db -d postgres:16.1
@@ -51,6 +53,7 @@ docker run --name pipeline_com_ia-sql-python-llm -p 5959:5432 -e POSTGRES_USER=s
 📌 Nota: Lembre-se de alterar os valores POSTGRES_USER e POSTGRES_PASSWORD conforme sua preferência e de atualizar config.py com essas credenciais.
 
 3️⃣ Instale o Ollama
+
 Baixe e instale o Ollama a partir do site oficial (utilizado a versão 3.1).
 
 Após a instalação, execute o comando abaixo para verificar se o modelo está disponível:
@@ -58,22 +61,27 @@ Após a instalação, execute o comando abaixo para verificar se o modelo está 
 ollama run llama3.1
 
 4️⃣ Execute o Pipeline e Dashboard
+
 Agora, basta rodar o seguinte comando para executar o pipeline e iniciar o dashboard:
 
-python 06-Executa_Pipeline_e_gera_Dash.py
+python "06-Executa Pipeline e gera Dash.py"
 
-Isso irá processar os dados, gerar insights com o LLM e disponibilizar um dashboard interativo.
+Isso irá:
 
+✅ Processar os dados
+✅ Gerar insights com o LLM
+✅ Disponibilizar um dashboard interativo
 
+⚠️ Observações Importantes
 
-📌 Observações
-Certifique-se de que o banco de dados PostgreSQL esteja rodando no Docker antes de executar os scripts.
+🔹 Certifique-se de que o banco de dados PostgreSQL esteja rodando no Docker antes de executar os scripts.
+🔹 O projeto utiliza dados fictícios para fins de demonstração.
+🔹 Para uma análise mais aprofundada, recomenda-se a utilização de um LLM adequado e devidamente configurado.
 
-O projeto utiliza dados fictícios para fins de demonstração.
-Para uma análise mais aprofundada, recomenda-se a utilização de um LLM adequado e devidamente configurado.
+🤝 Contribuições
 
-Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+Contribuições são muito bem-vindas! 🚀
+Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-Licença
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
+📜 Licença
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
