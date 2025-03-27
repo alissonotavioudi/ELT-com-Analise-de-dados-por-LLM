@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 
 # Configuração do dashboard
 st.set_page_config(page_title="📊 Dashboard de Análises de Clientes", layout="wide")
-st.title("📊 Análises Avançadas dos Clientes")
+st.title("📊 Análise do comportamento de compra dos clientes")
 
 # Função para carregar os dados do banco de dados
 def load_data():
