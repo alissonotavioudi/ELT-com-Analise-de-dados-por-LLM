@@ -3,7 +3,7 @@ numpy
 plotly
 matplotlib
 sqlalchemy
-psycopg2
+psycopg2-binary
 langchain_core
 langchain_community
 streamlit
