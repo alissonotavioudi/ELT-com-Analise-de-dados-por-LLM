@@ -29,7 +29,7 @@ def load_data():
             "Total Gasto" DESC;
     """
 
-    try:
+    try: 
         conn = psycopg2.connect(
             dbname=st.secrets["database"]["DB_NAME"],
             user=st.secrets["database"]["DB_USER"],
