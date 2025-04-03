@@ -5,9 +5,13 @@
 # Imports
 import csv
 import psycopg2
+import sys
+import os
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import OllamaLLM
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 print("\nIniciando o Processo de Extração de Insights...\n")

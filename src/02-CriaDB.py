@@ -3,6 +3,11 @@
 # Python - Pipeline de Criação do Banco de Dados
 
 import psycopg2
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 # Função para executar script SQL
@@ -41,4 +46,4 @@ def executa_script_sql(filename):
         conn.close()
 
 # Executa o script SQL
-executa_script_sql('01-Cria_DB_Tabelas.sql')
+executa_script_sql('src/01-Cria_DB_Tabelas.sql')

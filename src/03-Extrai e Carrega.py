@@ -5,7 +5,11 @@
 # Imports
 import psycopg2
 import pandas as pd
+import sys
+import os
 from sqlalchemy import create_engine
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from config import DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT
 
 # Cria o motor de conexão 
