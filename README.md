@@ -13,12 +13,14 @@ O fluxo do projeto é estruturado nas seguintes etapas:
 
 ## Estrutura do Projeto
 
+#Pasta Source
 - `01-Cria_DB_Tabelas.sql`: Script SQL para criação do banco de dados e tabelas necessárias.
 - `02-CriaDB.py`: Script Python para conexão ao banco de dados e execução do script SQL.
 - `03-Extrai_e_Carrega.py`: Realiza a extração de dados de uma API simulada e carrega no banco de dados.
 - `04-Transforma_dados_e_Gera_Insights_LLM.py`: Processa os dados e utiliza um LLM para gerar insights.
 - `05-Dash_Streamlit.py`: Implementa um dashboard interativo utilizando Streamlit para visualização dos insights.
 - `06-Executa_Pipeline_e_gera_Dash.py`: Script que orquestra a execução de todo o pipeline e inicia o dashboard.
+
 - `Gera_dados_aleatorios.py`: Gera dados fictícios para simular a extração de uma API.
 - `config.py`: Arquivo de configuração com parâmetros do banco de dados.
 - `insights.csv`: Arquivo CSV gerado contendo os insights produzidos pelo LLM.
